@@ -7,11 +7,12 @@ Please continue writing documentation at [mermaid-js/mermaid/docs](https://githu
 
 We publish documentation using GitHub Pages.
 
-
 ### Questions and/or suggestions ?
+
 After logging in at [GitHub.com](https://www.github.com), open or append to an issue [using the GitHub issue tracker of the mermaid-js repository](https://github.com/mermaid-js/mermaid/issues?q=is%3Aissue+is%3Aopen+label%3A%22Area%3A+Documentation%22).
 
 ### How to contribute a suggestion
+
 Markdown is used to format the text, for more information about Markdown [see the GitHub Markdown help page](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax).
 
 If you want to use an editor on your own computer, you may follow these steps:
@@ -29,9 +30,42 @@ If you don't have such editor on your computer, you may follow these steps:
 * Submit your changes by clicking the button "Propose file change" at the bottom (by automatic creation of a fork and a new branch).
 * Create a pull request of your newly forked branch, by clicking the green "Create pull request" button.
 
+## How to contribute code
+
+Install the latest stable version of Node.js and Yarn.
+
+### Setup
+
+    $ yarn install
+
+### Build
+
+    $ yarn build:watch
+
+### Lint
+
+    $ yarn lint
+
+We use [eslint](https://eslint.org/).
+We recommend you installing [editor plugins](https://eslint.org/docs/user-guide/integrations) so you can get real time lint result.
+
+### Test
+
+    $ yarn test
+
+Manual test in browser: open `dist/index.html`
+
+### Release
+
+For those who have the permission to do so:
+
+Update version number in `package.json`.
+
+    $ npm publish
+
+Command above generates files into the `dist` folder and publishes them to npmjs.org.
 
 ## How to add a new diagram type
-
 
 ### Step 1: Grammar & Parsing
 

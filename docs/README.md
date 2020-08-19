@@ -1,4 +1,5 @@
-# mermaid [![Build Status](https://travis-ci.org/mermaid-js/mermaid.svg?branch=master)](https://travis-ci.org/mermaid-js/mermaid) [![NPM](https://img.shields.io/npm/v/mermaid)](https://www.npmjs.com/package/mermaid) [![Coverage Status](https://coveralls.io/repos/github/mermaid-js/mermaid/badge.svg?branch=master)](https://coveralls.io/github/mermaid-js/mermaid?branch=master) [![Join our Slack!](https://img.shields.io/static/v1?message=join%20chat&color=9cf&logo=slack&label=slack)](https://join.slack.com/t/mermaid-talk/shared_invite/enQtNzc4NDIyNzk4OTAyLWVhYjQxOTI2OTg4YmE1ZmJkY2Y4MTU3ODliYmIwOTY3NDJlYjA0YjIyZTdkMDMyZTUwOGI0NjEzYmEwODcwOTE) [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Mermaid/mermaid)
+# Mermaid
+[![Build Status](https://travis-ci.org/mermaid-js/mermaid.svg?branch=master)](https://travis-ci.org/mermaid-js/mermaid) [![NPM](https://img.shields.io/npm/v/mermaid)](https://www.npmjs.com/package/mermaid) [![Coverage Status](https://coveralls.io/repos/github/mermaid-js/mermaid/badge.svg?branch=master)](https://coveralls.io/github/mermaid-js/mermaid?branch=master) [![Join our Slack!](https://img.shields.io/static/v1?message=join%20chat&color=9cf&logo=slack&label=slack)](https://join.slack.com/t/mermaid-talk/shared_invite/enQtNzc4NDIyNzk4OTAyLWVhYjQxOTI2OTg4YmE1ZmJkY2Y4MTU3ODliYmIwOTY3NDJlYjA0YjIyZTdkMDMyZTUwOGI0NjEzYmEwODcwOTE) [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Mermaid/mermaid)
 
 ![banner](./img/header.png)
 **Edit this Page** [![N|Solid](./img/GitHub-Mark-32px.png)](https://github.com/mermaid-js/mermaid/blob/develop/docs/README.md)
@@ -26,11 +27,11 @@ Want to see what can be built with mermaid, or what applications already support
 
 For a more detailed introduction to Mermaid and some of it's more basic uses, look to the [Beginner's Guide](./n00b-overview.md) and [Usage](./usage.md).
 
-🌐 [CDN](https://unpkg.com/mermaid/) | 📖 [Documentation](https://mermaidjs.github.io) | 🙌 [Contribution](https://github.com/mermaid-js/mermaid/blob/develop/CONTRIBUTING.md) | 📜 [Version Log](./docs/versionUpdates.md)
+🌐 [CDN](https://unpkg.com/mermaid/) | 📖 [Documentation](https://mermaidjs.github.io) | 🙌 [Contribution](https://github.com/mermaid-js/mermaid/blob/develop/CONTRIBUTING.md) | 📜 [Version Log](./versionUpdates.md)
 
 > 🖖 Keep a steady pulse: mermaid needs more Collaborators, [Read More](https://github.com/knsv/mermaid/issues/866).
 
-# Diagrams that mermaid can render:
+## Diagrams
 
 ### [Flowchart](https://mermaid-js.github.io/mermaid/#/flowchart)
 
@@ -150,51 +151,53 @@ journey
 ```
 ![Journey diagram](./img/user-journey.png)
 
-# Installation
-## In depth guides and examples can be found in [Getting Started](./n00b-gettingStarted.md) and [Usage](./usage.md).
+## Installation
 
-## It would also be helpful to learn more about mermaid's [Syntax](./n00b-syntaxReference.md).
+In depth guides and examples can be found in [Getting Started](./n00b-gettingStarted.md) and [Usage](./usage.md).
+To learn more about Mermaid's Syntax, please read the [Syntax Reference](./n00b-syntaxReference.md).
 
 ### CDN
 
+You can get Mermaid from [unpkg](https://unpkg.com/) or [jsDelivr](https://www.jsdelivr.com/):
+
+- https://unpkg.com/mermaid@8.7.0/dist/mermaid.min.js
+- https://cdn.jsdelivr.net/npm/mermaid@8.7.0/dist/mermaid.min.js
+
+The latest version is 8.7.0.
+
+### Install Mermaid
+
+You can use `npm` to install Mermaid as a dependency in your JavaScript project:
+
+1. You will need to install the current stable version of Node (which include `npm`)
+2. Open a terminal, and type the following command:
+
+        $ npm i mermaid --save
+
+**TIP:** If you want to install Mermaid as a development dependency, you can replace `--save` by `--save-dev`:
+
+    $ npm i mermaid --save-dev
+
+
+**NOTE:** If you are more familiar with Yarn, you can use the following command:
+
+    $ yarn add --dev mermaid
+
+### Usage
+
+The easiest way to add Mermaid on your website is to add the following code:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/mermaid@8.7.0/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true})</script>
 ```
-https://unpkg.com/mermaid@<version>/dist/
-```
 
-To select a version:
+`mermaid.initialize({startOnLoad:true})` will read diagram/chart definitions from all the `<div>` elements that have the `mermaid` class and render them as SVG.
 
-Replace `<version>` with the desired version number.
+Examples can be found in [Getting Started](./n00b-gettingStarted.md)
 
-Alternatively, you can also adjust the version number in the page itself. 
+## Sibling projects
 
-Latest Version: https://unpkg.com/browse/mermaid@8.6.0/
-
-## Incorporating mermaid to a website 
-To support mermaid on your website, all you have to do is add Mermaid’s JavaScript package 
-
-```
-1.You will need to isntall node v10 or 12, which would have npm
-
-2. download yarn using npm.
-
-3. enter the following command:
-    yarn add mermaid
-
-4. You can then add mermaid as a dev dependency using this command: 
-    yarn add --dev mermaid
-   
-```
-
-## To deploy mermaid without a bundler, one can insert a `script` tag with an absolute address and a `mermaidAPI` call into the HTML like so:
-```
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true});</script>
-```
-## doing so will command the mermaid parser to look for the `<div>` tags with `class="mermaid"` in your HTML Document. From these tags mermaid will try to read the diagram/chart definitons and render them as svg charts.
-
-## Examples can be found in [Getting Started](./n00b-gettingStarted.md)
-
-# Sibling projects
 - [mermaid live editor](https://github.com/mermaidjs/mermaid-live-editor)
 - [mermaid CLI](https://github.com/mermaidjs/mermaid.cli)
 - [mermaid webpack demo](https://github.com/mermaidjs/mermaid-webpack-demo)
@@ -215,48 +218,6 @@ Together we could continue the work with things like:
 - Improving existing diagrams
 
 Don't hesitate to contact me if you want to get involved.
-
-## For contributors
-
-### Setup
-
-```
-yarn install
-```
-
-### Build
-
-```
-yarn build:watch
-```
-
-### Lint
-
-```
-yarn lint
-```
-
-We use [eslint](https://eslint.org/).
-We recommend you installing [editor plugins](https://eslint.org/docs/user-guide/integrations) so you can get real time lint result.
-
-### Test
-
-```
-yarn test
-```
-Manual test in browser: open `dist/index.html`
-
-### Release
-
-For those who have the permission to do so:
-
-Update version number in `package.json`.
-
-```
-npm publish
-```
-
-Command above generates files into the `dist` folder and publishes them to npmjs.org.
 
 ## Credits
 
